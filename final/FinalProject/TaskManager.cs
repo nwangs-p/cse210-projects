@@ -4,17 +4,19 @@ class TaskManager
 
     public TaskManager()
     {
-      
+        tasks = new List<Task>();
     }
 
-    // Encapsulation
     public void AddTask(Task task)
     {
-        
+        tasks.Add(task);
     }
 
     public void DisplayTasks()
     {
-        
+        foreach (var task in tasks)
+        {
+            task.DisplayDetails();
+        }
     }
 }
